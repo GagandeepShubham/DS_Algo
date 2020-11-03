@@ -15,13 +15,13 @@ struct node
 
 node *root = NULL;
 
-int height(node *temp)
+int height(node *temp)     //returns the height of the node
 {
     if(temp == NULL)return 0;
     else return temp -> height;
 }
 
-int get_Balance_Factor(node *temp)
+int get_Balance_Factor(node *temp)  //returns the balance factor of the node.
 {
     if(temp == NULL)return 0;
     else return height(temp -> left) - height(temp -> right);
