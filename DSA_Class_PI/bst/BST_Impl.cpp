@@ -7,6 +7,7 @@
  * inorder() - this function prints the nodes of the BST  using inorder traversal. [gives the sorted sequence for BST]
  * NOTE : declare the root globally , it will make the implementation a lot easier.
 **/
+
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
