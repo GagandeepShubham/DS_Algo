@@ -1,5 +1,6 @@
 /**
- * Program to buil binary search tree.
+ * Program to build binary search tree.
+ * Nodes are inserted by hard coding.
 **/
 
 #include<stdio.h>
