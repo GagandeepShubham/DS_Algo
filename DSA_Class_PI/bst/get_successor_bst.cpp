@@ -19,7 +19,7 @@ struct node
 struct node *root;
 vector<int> v;
 
-struct node * insert(struct node *root , int data)
+struct node * insert(struct node *root , int data)   //insert the data in the BST.
 {
     struct node *temp = new node();
     temp -> left = NULL;
@@ -28,13 +28,13 @@ struct node * insert(struct node *root , int data)
     if(root == NULL)root = temp;
     else
     {
-        if(data < root -> data) root -> left = insert(root -> left, data);
-        else if(data >= root -> data) root -> right = insert(root -> right, data);
+        if(data < root -> data) root -> left = insert(root -> left, data);  //if data to be inserted is lesser than the root node, then insert in left.
+        else if(data >= root -> data) root -> right = insert(root -> right, data); //if data to be inserted is greater than the root node, then insert in right.
     }
-    return root;
+    return root;       
 }
 
-void inorder(struct node *root)
+void inorder(struct node *root)   //instead of printing the BST, store the elements of BST in a vector.
 {
     if(root == NULL)return;
     inorder(root -> left);
@@ -42,17 +42,17 @@ void inorder(struct node *root)
     inorder(root -> right);   
 }
 
-int find_successor(int data)
+int find_successor(int data)    //function which finds the inorder successor of an element
 {
     int i;
-    inorder(root);
+    inorder(root);                     //call inorder to store the elements in a vector in sorted order.
     for(i = 0; i < v.size(); i++)
     {
         if(v[i] == data)break;
     }
-    if(i + 1 == v.size())return -1;
-    else return v[i + 1];
-}
+    if(i + 1 == v.size())return -1;     //if the node whose successor is to be found is the last node in the array then its successor doesn't exist.
+    else return v[i + 1];               //else return the next element.
+} 
 
 int main()
 {
