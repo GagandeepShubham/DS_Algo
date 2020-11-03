@@ -1,3 +1,7 @@
+/**
+  * Program to find the predecessor of a node in the BST.
+**/
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -12,7 +16,7 @@ struct node
 struct node *root;
 vector <int> v;
 
-struct node * insert(struct node *root, int data)
+struct node * insert(struct node *root, int data)     //function to insert a data in the BST.
 {
     struct node *temp = new node();
     temp -> left = NULL;
@@ -28,7 +32,7 @@ struct node * insert(struct node *root, int data)
     return root;
 }
 
-void inorder(struct node *root)
+void inorder(struct node *root)  //instead of printing the BST, this inorder function will store the data in the array.
 {
     if(root == NULL)return;
     inorder(root -> left);
@@ -42,10 +46,10 @@ int find_predecessor(int data)
     int i;
     for(i = 0; i < v.size(); i++)
     {
-        if(v[i] == data)break;
+        if(v[i] == data)break;       //find the data whose predecessor is to be found.
     }
-    if(i - 1 < 0) return -1;
-    else return v[i - 1];
+    if(i - 1 < 0) return -1;         //if the data whose predecessor is to be found is the first node in the array, then it will have no predecessor.
+    else return v[i - 1];            //else return the previous element.
 }
 
 int main()
