@@ -1,3 +1,5 @@
+//Program to find the maximum element in a binary search tree.
+
 #include<iostream>
 using namespace std;
 
@@ -10,14 +12,14 @@ struct node
 
 struct node *root;
 
-struct node * insert(struct node *root, int data)
+struct node * insert(struct node *root, int data)  //insert a node into a BST.
 {
-    struct node * temp = new node();
+    struct node * temp = new node();   //create a node.
     temp -> left = NULL;
-    temp -> right = NULL;
-    temp -> data = data;
-
-    if(root == NULL)root = temp;
+    temp -> right = NULL; 
+    temp -> data = data;               //assign data to the node.
+ 
+    if(root == NULL)root = temp;       //if the node created is the first node.
     else
     {
         if(data < root -> data)root -> left = insert(root -> left, data);
@@ -26,7 +28,7 @@ struct node * insert(struct node *root, int data)
     return root;
 }
 
-void inorder(struct node *root)
+void inorder(struct node *root)  //print the BST using inorder traversal
 {
     if(root == NULL)return;
     inorder(root -> left);
@@ -34,13 +36,13 @@ void inorder(struct node *root)
     inorder(root -> right);
 }
 
-int find_max()
+int find_max()          //find the max element in the BST
 {
     struct node *temp = root;
-    while(temp != NULL && temp -> right != NULL)
+    while(temp != NULL && temp -> right != NULL)  //keep on going right until you get a node whose right is NULL
         temp = temp -> right;
 
-    return temp -> data;
+    return temp -> data;       //return the data of the rightmost node.
 }
 
 int main()
@@ -53,13 +55,13 @@ int main()
     for(i = 0; i < n; i++)
     {
         cin >> data;
-        root = insert(root, data);
+        root = insert(root, data);      //insert a node with given data in the BST.
     }
 
     cout << "BST is: ";
     inorder(root);
 
     int max = find_max();
-    cout << "\nMaximum element in BST:" << max;
+    cout << "\nMaximum element in BST:" << max;  //print the maximum element
 
 }
