@@ -18,34 +18,34 @@ struct node
 
 struct node *root;
 
-node * insert(node * root, int data)
+node * insert(node * root, int data) //insert a node in the BST
 {
     node * temp = new node();
     temp -> left = NULL;
     temp -> right = NULL;
     temp -> data = data;
-    if(root == NULL)root = temp;
+    if(root == NULL)root = temp;    //if the node just created is the first node to be inserted.
     else
     {
         if(data < root -> data)
         {
-            root -> left = insert(root -> left, data);
+            root -> left = insert(root -> left, data); //if node just created is smaller than the root node then insert in left subtree
         }
         else if(data >= root -> data)
         {
-            root -> right = insert(root -> right, data);
+            root -> right = insert(root -> right, data);  //if node just created is larger than the root node then insert in right subtree.
         }
     }
-   return root; 
+   return root;           //return root.
 }
 
 struct node * search_data(struct node *root , int data)
 {
     struct node *temp;
-    if(root == NULL || root -> data == data)temp = root;
-    else if(root -> data > data)temp = search_data(root -> left, data);
-    else if(root -> data < data) temp = search_data(root -> right, data); 
-    return temp;
+    if(root == NULL || root -> data == data)temp = root;      //if the data to be searched is found or the tree doesn't contain that data.
+    else if(root -> data > data)temp = search_data(root -> left, data); //if data to be searches is lesser than the root data then search in LST.
+    else if(root -> data < data) temp = search_data(root -> right, data); //if data to be searched is greater than the root data then search in RST.
+    return temp;  //return pointer to the node.
 }
 
 int main()
