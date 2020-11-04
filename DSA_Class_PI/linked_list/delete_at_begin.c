@@ -2,6 +2,7 @@
  * In this program it is supposed that all the new nodes which are to be inserted 
  * are inserted at end.
 **/
+
 #include<stdio.h>
 #include<stdlib.h>
 
