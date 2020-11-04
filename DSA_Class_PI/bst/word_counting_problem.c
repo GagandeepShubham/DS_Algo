@@ -1,4 +1,5 @@
 /**
+ * Implementation is based on the lecture slide.
  * word counting problem, it counts the occurences of the words occured in the tree.
  * remember: strcmp returns 0 if both the strings given as arguments matches exactly
  * strcmp returns -1 if the first argument's first char is lesser than the second argument's second character.
