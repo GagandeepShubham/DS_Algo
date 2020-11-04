@@ -1,5 +1,5 @@
 /**
- * Program to insert a given node at the given position.
+ * Program to insert a given node at the given position in DLL.
 **/
 
 #include<stdio.h>
