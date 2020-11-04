@@ -56,6 +56,7 @@ void treeprint(tnode *node) //print the nodes of the tree
     cout << node -> word << ":" << node -> count << "\n";
     treeprint(node -> right);
 }
+
 int main()
 {
     tnode *root = NULL;
