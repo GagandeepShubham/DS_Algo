@@ -2,7 +2,7 @@
  * Insertion of each new node is done at the beginning of the list.
  **/
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdlib.h> 
 
 struct Node
 {
