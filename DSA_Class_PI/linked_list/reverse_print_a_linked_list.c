@@ -33,7 +33,7 @@ void Insert(int x)
 
 void print()
 {
-    struct Node *temp = head;
+    struct Node *temp = head; 
     while(temp != NULL)
     {
         printf("%d ", temp -> data);
