@@ -1,3 +1,5 @@
+/**Program to find minimum element in a BST **/
+
 #include<iostream>
 using namespace std;
 
@@ -19,8 +21,8 @@ struct node * insert(struct node *root, int data)
     if(root == NULL)root = temp;
     else
     {
-        if(data < root -> data) root -> left = insert(root -> left, data);
-        else if(data >= root -> data) root -> right = insert(root -> right, data);
+        if(data < root -> data) root -> left = insert(root -> left, data);  //if data to be inserted is lesser than root data then insert in LST of root.
+        else if(data >= root -> data) root -> right = insert(root -> right, data); //if data to be inserted is greater than root data then insert in RST of root.
     }
    return root; 
 }
@@ -28,7 +30,7 @@ struct node * insert(struct node *root, int data)
 int find_min()
 {
     struct node *temp = root;
-    while(temp != NULL && temp -> left != NULL)
+    while(temp != NULL && temp -> left != NULL)   //go to the leftmost node.
         temp = temp -> left;
     
     return temp -> data;
