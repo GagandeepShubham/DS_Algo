@@ -1,3 +1,6 @@
+/**Program to count the no. of words and their occurences in a given sentence
+  *using BST
+**/
 #include<iostream>
 #include<string>
 #include<vector>
