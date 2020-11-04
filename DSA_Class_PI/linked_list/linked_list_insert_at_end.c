@@ -1,6 +1,6 @@
 /**
  * Linked list implementation
- * Inserting a new node at end
+ * Inserting a new node at end 
  **/
 #include<stdio.h>
 #include<stdlib.h>
