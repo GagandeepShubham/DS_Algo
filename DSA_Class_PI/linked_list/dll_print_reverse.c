@@ -47,7 +47,7 @@ void print_reverse()
     {
         temp  = temp -> next;
     }
-    while(temp != NULL)
+    while(temp != NULL) 
     {
         printf("%d ",temp -> data);
         temp = temp -> prev;
