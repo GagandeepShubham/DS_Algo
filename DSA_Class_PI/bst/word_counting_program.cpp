@@ -1,6 +1,6 @@
 /**
  * This program is implemented from the course lecture slide.
- * The word counting problem using c++
+ * The word counting problem using c++ 
 **/
 #include<iostream>
 #include<vector>
