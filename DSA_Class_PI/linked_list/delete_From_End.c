@@ -2,6 +2,7 @@
  * Program to demonstrate the deletion in linked list.
  * First the linked list will be created and the new nodes will be inserted at the end of the linked list.
 **/
+
 #include<stdio.h>
 #include<stdlib.h>
 struct Node
