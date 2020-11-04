@@ -2,6 +2,7 @@
  * This program takes a key from user and finds the position in the linked list.
  * if the key doesn't exists in the linked (list then print an appropriate message.
 **/
+
 #include<stdio.h>
 #include<stdlib.h>
 struct Node
