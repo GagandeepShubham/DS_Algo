@@ -3,6 +3,7 @@
  * User should provide the position on 0 based indexing.
  * The linked list is created by inserting each node at the end.
 **/
+
 #include<stdio.h>
 #include<stdlib.h>
 
