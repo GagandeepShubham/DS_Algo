@@ -1,4 +1,5 @@
-/*Program to implement the circular queue */
+/*Program to implement a circular queue */
+
 #include<stdio.h>
 #define MAXSIZE 5
 
